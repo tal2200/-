@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לוח בקרה - מערכת מידע ויזואלית</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4a00e0, #88d3ce);
+            color: #333;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #4a00e0, #8e2de2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #4a00e0;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            color: #555;
+        }
+
+        .tableau-container {
+            width: 100%;
+            height: 600px;
+            margin: 2rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, #4a00e0, #8e2de2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .tableau-container {
+                height: 400px;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>לוח בקרה - מערכת מידע ויזואלית</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>תיאור המערכת</h2>
+            <p>המערכת הוויזואלית שלנו מציעה פתרון מקיף לניהול נתוני מכירות, שיווק ושביעות רצון לקוחות. היא משלבת כלים מתקדמים לניתוח נתונים ותצוגה ויזואלית, המאפשרים למשתמשים לקבל תובנות בזמן אמת ולשפר את קבלת ההחלטות.</p>
+        </div>
+
+        <div class="section">
+            <h2>משמעות הגרף המוצג</h2>
+            <p>הגרף המוצג בלוח הבקרה מספק תצוגה ויזואלית של ביצועי המכירות והשיווק לאורך זמן, כולל מדדים כמו הכנסות, שיעורי המרה ושביעות רצון לקוחות. הגרף מאפשר זיהוי מגמות, נקודות חוזק ותחומים לשיפור, תוך שימוש בצבעים דינמיים להדגשת נתונים קריטיים.</p>
+        </div>
+
+        <div class="section">
+            <h2>לוח הבקרה</h2>
+            <div class="tableau-container">
+                <div class='tableauPlaceholder' id='viz17533727897010' style='position: relative'>
+                    <noscript>
+                        <a href="#">
+                            <img alt="Tableau Dashboard" src="https://public.tableau.com/static/images/_1/_17533727897010/Dashboard1/1_rss.png" style="border:none;" />
+                        </a>
+                    </noscript>
+                    <object id="tableauVizObj" class="tableauViz" type="text/html" style="display:none;">
+                        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                        <param name="embed_code_version" value="3" />
+                        <param name="site_root" value="" />
+                        <param name="name" value="_17533727897010/Dashboard1" />
+                        <param name="tabs" value="no" />
+                        <param name="toolbar" value="yes" />
+                        <param name="display_spinner" value="yes" />
+                        <param name="display_overlay" value="yes" />
+                        <param name="showVizHome" value="no" />
+                        <param name="device" value="desktop" />
+                    </object>
+                </div>
+            </div>
+            <a href="index.html" class="cta-button">חזרה למסך הבית</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 מערכת מידע ויזואלית. כל הזכויות שמורות.</p>
+    </footer>
+
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz17533727897010');
+        var vizElement = document.getElementById('tableauVizObj');
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '727px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Animation for sections
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

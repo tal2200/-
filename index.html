@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מכירות, שיווק ושביעות רצון – הכל במקום אחד</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6e45e2, #88d3ce);
+            color: #333;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #4a00e0, #8e2de2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav {
+            margin: 1rem 0;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4a00e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #4a00e0;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, #4a00e0, #8e2de2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>מכירות, שיווק ושביעות רצון – הכל במקום אחד</h1>
+    </header>
+
+    <div class="container">
+        <div class="section" id="about">
+            <h2>אודות המערכת</h2>
+            <p>המערכת שלנו היא פתרון חדשני לניהול מכירות, שיווק ושביעות רצון לקוחות. היא מספקת תצוגה ויזואלית מתקדמת של נתונים בזמן אמת, המאפשרת לעסקים לקבל החלטות מושכלות ולשפר את הביצועים שלהם.</p>
+        </div>
+
+        <div class="section" id="goals">
+            <h2>מטרות המערכת</h2>
+            <ul>
+                <li>שיפור יעילות תהליכי מכירה ושיווק</li>
+                <li>ניתוח נתונים מתקדם להבנת התנהגות לקוחות</li>
+                <li>הגדלת שביעות רצון הלקוחות באמצעות כלים ויזואליים</li>
+                <li>אינטגרציה חלקה עם מערכות קיימות</li>
+            </ul>
+        </div>
+
+        <div class="section" id="dashboard">
+            <h2>גישה ללוח הבקרה</h2>
+            <p>גשו ללוח הבקרה שלנו כדי לחוות את הכוח של ניהול נתונים ויזואלי. התחילו עכשיו!</p>
+            <a href="dash1.html" class="cta-button">To the Dashboard</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 מערכת מידע ויזואלית. כל הזכויות שמורות.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Add animation to sections when they come into view
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
